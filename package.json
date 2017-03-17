@@ -22,5 +22,8 @@
   "homepage": "https://github.com/liushengxian/hackernews#readme",
   "devDependencies": {
     "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "vue": "^2.2.4"
   }
 }
