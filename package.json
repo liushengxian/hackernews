@@ -4,7 +4,10 @@
   "description": "A copy of hackernews made by vuejs, just for a job, haha.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebeatit": "echo \"Clean dist...\" & rm -rf dist && mkdir dist",
+    "beatit": "webpack && cp src/index.html dist/index.html",
+    "server": "echo \"Start Server!\" & webpack-dev-server --content-base dist/"
   },
   "repository": {
     "type": "git",
@@ -21,9 +24,14 @@
   },
   "homepage": "https://github.com/liushengxian/hackernews#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
-    "vue": "^2.2.4"
+    "vue": "^2.2.4",
+    "vue-router": "^2.3.0"
   }
 }
