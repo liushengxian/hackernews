@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebeatit": "echo \"Clean dist...\" & rm -rf dist && mkdir dist",
-    "beatit": "webpack && cp src/index.html dist/index.html",
+    "beatit": "webpack",
     "server": "echo \"Start Server!\" & webpack-dev-server --content-base dist/"
   },
   "repository": {
@@ -24,9 +24,19 @@
   },
   "homepage": "https://github.com/liushengxian/hackernews#readme",
   "devDependencies": {
+    "babel-loader": "^6.4.1",
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
     "gulp": "^3.9.1",
+    "html-webpack-plugin": "^2.28.0",
     "less": "^2.7.2",
-    "less-loader": "^4.0.0",
+    "less-loader": "^4.0.2",
+    "style-loader": "^0.15.0",
+    "url-loader": "^0.5.8",
+    "vue-loader": "^11.2.0",
+    "vue-style-loader": "^2.0.4",
+    "vue-template-compiler": "^2.2.4",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
   },

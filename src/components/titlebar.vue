@@ -1,17 +1,20 @@
 <template>
 	<div class="banner">
-		<img src="http://placehold.it/18x18">
+		<img src="favicon.ico" width="18" height="18">
 		<h2>Hacker News</h2>
-		<span>new</span>
-		<span>comments</span>
-		<span>show</span>
-		<span>ask</span>
-		<span>jobs</span>
+		<a href="/new">new</a>|
+		<a href="/comments">comments</a>|
+		<a href="/show">show</a>|
+		<a href="/ask">ask</a>|
+		<a href="/jobs">jobs</a>
 	</div>
 </template>
 
 <script>
-	module.exports = {
-		
+
+	export default{
+		//do nothing.
 	}
 </script>
+
+<style src="./titlebar.less" lang="less" scoped></style>
