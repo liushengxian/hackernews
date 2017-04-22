@@ -6,7 +6,8 @@
 		<ol class="news-list">
 			<li v-for='item in newsData' class="news-item">
 				<a v-if='item.url' v-bind:href='item.url'><span>{{item.title}}</span></a>
-				<a v-if='!item.url' v-bind:href='"/#/item/"+item.id'><span>{{item.title}}</span></a>
+				<a v-if='!item.url' v-bind:href='"/#/item/"+item.id'
+				class="hacker-site"><span>{{item.title}}</span></a>
 				<p>
 					<span v-if='(item.score>1)'>{{item.score}} points by {{item.by}} </span>
 					<span v-if='(item.score<=1)'>{{item.score}} point by {{item.by}} </span>
@@ -22,6 +23,8 @@
 	let topList = [];
 	let topData = [];
 
+
+
 	let readData = ()=>{
 		for (var i = 0; i < topList[0].length&&i<20; i++) {
 			store.getItem(topList[0][i],(data)=>{
@@ -33,7 +36,7 @@
 
 	module.exports = {
 		mounted: function(){
-			store.getAskStories((data)=>{
+			store.getTopStories((data)=>{
 				topList.push(data);
 				readData();
 			});
